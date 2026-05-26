@@ -1,0 +1,5 @@
+data/creditcard.csv
+__pycache__/
+*.pyc
+.DS_Store
+outputs/models/*.pth
