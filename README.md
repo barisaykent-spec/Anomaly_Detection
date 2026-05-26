@@ -36,15 +36,19 @@ Veri setini [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)'da
 
 ```
 notebooks/
-├── 01_eda.ipynb          # Keşifsel veri analizi
-├── 02_model.ipynb        # Model eğitimi
-└── 03_evaluation.ipynb   # Metrikler ve grafikler
+└── 01_eda.ipynb          # EDA, model eğitimi ve değerlendirme
 
 src/
 ├── model.py              # Autoencoder mimarisi
 ├── dataset.py            # Dataset ve DataLoader
 └── utils.py              # Eğitim ve değerlendirme fonksiyonları
 
+outputs/
+├── figures/              # Grafikler (EDA, loss curve, ROC, vb.)
+└── models/               # Eğitilmiş model ağırlıkları (.pth)
+
+report/
+└── report.md             # Akademik rapor
 ```
 
 ## Teknolojiler
