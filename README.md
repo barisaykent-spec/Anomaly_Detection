@@ -33,14 +33,19 @@ Veri setini [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)'da
 `data/creditcard.csv` olarak kaydedin.
 
 ## Kullanım
+
+```
 notebooks/
 ├── 01_eda.ipynb          # Keşifsel veri analizi
 ├── 02_model.ipynb        # Model eğitimi
 └── 03_evaluation.ipynb   # Metrikler ve grafikler
+
 src/
 ├── model.py              # Autoencoder mimarisi
 ├── dataset.py            # Dataset ve DataLoader
 └── utils.py              # Eğitim ve değerlendirme fonksiyonları
+
+```
 
 ## Teknolojiler
 
