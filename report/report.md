@@ -165,6 +165,25 @@ Bu projede threshold seçimi kritik bir tasarım kararıdır ve iş gereksinimin
 - **Yüksek Precision öncelikliyse (müşteri memnuniyeti):** Yüksek threshold — bazı fraudlar kaçırılır.
 - **Dengeli (F1 max):** Threshold = 4.44, her iki taraf için kabul edilebilir orta yol.
 
+### 5.4 Baseline Karşılaştırması: Isolation Forest
+
+Aynı eğitim stratejisiyle (yalnızca normal veriler) Isolation Forest modeli de test edilmiştir.
+
+| Metrik | Autoencoder | Isolation Forest |
+|---|---|---|
+| ROC-AUC | **0.9559** | 0.9491 |
+| F1 Score (Fraud) | **0.60** | 0.37 |
+| Recall (Fraud) | **0.65** | 0.28 |
+| Precision (Fraud) | 0.56 | 0.56 |
+
+Autoencoder her metrikte üstün performans göstermiştir. Bunun temel nedeni, 
+veri setindeki V1–V28 feature'larının PCA ile dönüştürülmüş olmasıdır. 
+Bu durumda fraud işlemler geometrik olarak uç değer olmayabilir — 
+Isolation Forest'ın zayıf kaldığı nokta tam olarak budur. 
+Autoencoder ise feature uzayındaki geometrik konuma değil, 
+**örüntünün yeniden üretilebilirliğine** dayandığı için bu senaryoda 
+daha etkili bir anomali tespiti sağlamaktadır.
+
 ---
 
 ## 6. Sonuç
